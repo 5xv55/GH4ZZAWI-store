@@ -7,32 +7,70 @@
 
 <body>
 
+<header>
 <h1>GH4ZZAWI STREETWEAR</h1>
-<p>Premium Hoodies. Free Shipping.</p>
+<p>Premium Hoodies. Free Shipping Worldwide.</p>
+</header>
+
+<h2>Shop</h2>
+
+<div class="shop">
 
 <div class="product">
-<h2>Sp5der Hoodie</h2>
+<img src="sp5der.jpg" width="200">
+<h3>Sp5der Hoodie</h3>
 <p>$65</p>
-<select>
+
+<select id="sp5derColor">
 <option>Black</option>
 <option>Red</option>
 <option>Pink</option>
 <option>Blue</option>
 </select>
-<button>Add To Cart</button>
+
+<button onclick="addToCart('Sp5der Hoodie',65,'sp5derColor')">Add To Cart</button>
 </div>
 
 <div class="product">
-<h2>Denim Tears Hoodie</h2>
+<img src="denim.jpg" width="200">
+<h3>Denim Tears Hoodie</h3>
 <p>$75</p>
-<select>
+
+<select id="denimColor">
 <option>Black</option>
 <option>Grey</option>
 <option>Green</option>
 <option>Brown</option>
 </select>
-<button>Add To Cart</button>
+
+<button onclick="addToCart('Denim Hoodie',75,'denimColor')">Add To Cart</button>
 </div>
+
+</div>
+
+<h2>Cart</h2>
+
+<div id="cart"></div>
+
+<h3>Total: $<span id="total">0</span></h3>
+
+<h2>Checkout</h2>
+
+<input placeholder="Full Name"><br><br>
+<input placeholder="Address"><br><br>
+<input placeholder="Email"><br><br>
+
+<button onclick="checkout()">Place Order</button>
+
+<footer>
+
+<h3>Follow GH4ZZAWI</h3>
+
+<a href="https://instagram.com">Instagram</a><br>
+<a href="https://tiktok.com">TikTok</a><br>
+<a href="https://twitter.com">Twitter</a><br>
+
+</footer>
 
 <script src="script.js"></script>
 
