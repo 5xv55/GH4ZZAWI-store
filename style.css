@@ -1,12 +1,37 @@
-body{
-background:black;
-color:white;
-font-family:Arial;
-text-align:center;
+let cart=[]
+let total=0
+
+function addToCart(name,price,colorId){
+
+let color=document.getElementById(colorId).value
+
+cart.push(name+" - "+color)
+
+total+=price
+
+updateCart()
+
 }
 
-.product{
-border:1px solid white;
-padding:20px;
-margin:20px;
+function updateCart(){
+
+let cartDiv=document.getElementById("cart")
+cartDiv.innerHTML=""
+
+cart.forEach(item=>{
+cartDiv.innerHTML+= "<p>"+item+"</p>"
+})
+
+document.getElementById("total").innerText=total
+
+}
+
+function checkout(){
+
+alert("Order placed. We will contact you.")
+
+cart=[]
+total=0
+updateCart()
+
 }
